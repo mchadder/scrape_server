@@ -132,6 +132,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
 try:
 # can specify the address specifically, and it will only serve with addresses exactly that
 #    server = http.server.HTTPServer(('10.100.4.221', PORT), MyHandler)
+    print(f"Starting on ({IPADDR},{PORT})")
     server = http.server.HTTPServer((IPADDR, PORT), MyHandler)
     server.serve_forever()
 except KeyboardInterrupt:
